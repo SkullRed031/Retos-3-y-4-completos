@@ -63,7 +63,7 @@ function ingresarDatos(){
 	contentType: "application/json; charset=utf-8",
 	statusCode: {
 		201: function () {
-			alert("La sala se agrego exitosamente");
+			alert("La cabaña se agrego exitosamente");
 			Cargar();
 		}
 	}
@@ -80,8 +80,8 @@ function editarRegistro (id){
     success : function(respuesta) {
 		console.log(respuesta); 
 			$("#id").val(respuesta.id);
-			$("#brand").val(respuesta.owner);
-			$("#rooms").val(respuesta.capacity);			
+			$("#brand").val(respuesta.brand);
+			$("#rooms").val(respuesta.rooms);			
 			$("#name").val(respuesta.name);
 			$("#description").val(respuesta.description);
 //                        $("#category").val(respuesta.category);
@@ -117,7 +117,7 @@ function actualizar(){
     statusCode : {
 		
 		201 :  function() {
-			alert("La sala se actualizo exitosamente");
+			alert("La cabaña se actualizo exitosamente");
 			$("#id").attr('disabled', false);
         	Cargar();	
 			}
@@ -133,7 +133,7 @@ function Eliminar(id){
     contentType: "application/json; charset=utf-8",
     statusCode: {
                 204: function () {
-                    alert("La sala se elimino exitosamente!");
+                    alert("La cabaña se elimino exitosamente!");
 					Cargar();
                 }
             }

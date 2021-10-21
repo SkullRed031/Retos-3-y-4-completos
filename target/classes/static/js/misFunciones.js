@@ -73,7 +73,7 @@ limpiarCampos();
 }}
 function editarRegistro (id){
 	$.ajax({    
-    url : 'http://144.22.58.129/api/Cabin/'+id,
+    url : 'http://144.22.58.129:8080/api/Cabin/'+id,
     type : 'GET',
     dataType : 'json',
     contentType: "application/json; charset=utf-8",
